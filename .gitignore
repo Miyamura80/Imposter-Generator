@@ -7,3 +7,5 @@ IgnoreFiles/
 
 #Ignore specific file
 token.txt
+
+.idea/
