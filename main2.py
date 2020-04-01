@@ -9,11 +9,11 @@ from argparse import Namespace
 
 
 flags = Namespace(
-    train_file='MichaelTexts.txt',
+    train_file='trump.txt',
     seq_size=32,
     batch_size=16,
     embedding_size=64,
-    lstm_size=64,
+    lstm_size=8,
     gradients_norm=5,
     initial_words=['I', 'am'],
     predict_top_k=5,
@@ -115,7 +115,8 @@ def predict(device, net, words, n_vocab, vocab_to_int, int_to_vocab, top_k=5):
         choice = np.random.choice(choices[0])
         words.append(int_to_vocab[choice])
 
-    print(' '.join(words).encode('utf-8'))
+    outStr = ' '.join(words).encode('utf-8').decode('utf-8')
+    print(outStr)
 
 
 def main():

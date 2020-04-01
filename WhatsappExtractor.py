@@ -1,11 +1,13 @@
 import re
 
-with open("WhatsApp Chat with Crap in a Wrap.txt", "r", encoding='utf8') as textFile:
+mainFile = "WhatsApp Chat with Crap in a Wrap.txt"
+
+with open("WhatsApp_Chat_with_Chua_Hou.txt", "r", encoding='utf8') as textFile:
     wholeChat = textFile.read()
 
-export = open("MichaelTexts.txt", "w", encoding='utf8')
+export = open("ChuaHou.txt", "w", encoding='utf8')
 
-result = re.findall('Michael: (.*)\n', wholeChat)
+result = re.findall('Chua Hou: (.*)\n', wholeChat)
 count = 0
 for text in result:
     if not (re.match('<', text) or re.match('http', text)):
