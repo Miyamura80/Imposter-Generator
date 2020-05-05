@@ -1,4 +1,5 @@
 #neglects all text files
+*.txt
 *.webm
 
 #Ignore files in the folder
